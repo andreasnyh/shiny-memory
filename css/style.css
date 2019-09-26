@@ -6,6 +6,11 @@
 	/* user-select: none; */
 }
 
+:root {
+	--color-primary-50: hsl(189, 43%, 80%);
+	--color-primary-100: rgba(71, 163, 179, 1);
+}
+
 body {
 	position: relative;
 
@@ -28,7 +33,7 @@ footer {
 	width: 100%;
 	padding: 3em;
 	margin: 4em 0 0;
-	background-color:  rgba(71, 163, 179, 0.5);
+	background-color: var(--color-primary-100);
 }
 
 img {
@@ -38,13 +43,13 @@ img {
 
 header>nav {
 	padding: .5em 0;
-	background-color: rgba(71, 163, 179, 0.5);
+	background-color: var(--color-primary-50);
 	width: 100%;
 	font-size: 1.3em;
 }
 
 header>nav ul {
-	height: 100%;
+	/* height: 100%; */
 	width: 100%;
 }
 
@@ -64,14 +69,18 @@ nav .nav-link:focus {
 	border-radius: .5em;
 }
 
-.nav-icon {
+.nav-links-container-handheld {
+	display: none;
+}
+
+.checkout-icon {
 	height: 3em;
 	padding: .5em;
 	/* border: 1px solid red; */
 }
 
 .shadow {
-	box-shadow: 0 0 1em .5em rgba(125, 125, 125, 0.25);
+	box-shadow: 0 0 1em .25em rgba(125, 125, 125, 0.25);
 }
 
 /* NAV FLEX SPACING
@@ -138,10 +147,6 @@ header>nav>ul li a {
 .checkout-container>li:first-child {
 	padding: 0 .5em;
 	/* border: 2px solid red; */
-}
-
-#text {
-	display: none;
 }
 
 .menu-item+.menu-item,
@@ -323,24 +328,61 @@ p {
 	/*  NAV
 ############################################################# */
 
-	nav {
+
+	nav ul {
 		position: fixed;
-		height: 4em;
 		top: 0;
+		z-index: 3;
+		/* background-color: var(--color-primary-50); */
+	}
+
+	nav::after {
+		content: '';
+		position: fixed;
 		z-index: 2;
+		top: 0;
+		bottom: 0;
+		width: 100vw;
+		height: 4em;
+		background-color: red;
 	}
 
-	nav .nav-link:hover,
-	nav .nav-link:focus {
-		background-color: none;
-		border-radius: none;
+	header>nav {
+		display: flex;
+		height: 4em;
+		justify-content: space-between;
+
 	}
 
-	.menu-container,
+	.nav-logo-container {
+		width: 11em;
+	}
+
+	.nav-links-container {
+		display: none;
+
+	}
+
+	.nav-links-container-handheld {
+		display: inline-block;
+		position: absolute;
+		width: 100vw;
+		text-align: center;
+		top: 4em;
+		background-color: transparent;
+		z-index: 1;
+	}
+
+	.checkout-container {
+		width: 11em;
+		right: 0;
+	}
+
+	/* .menu-container,
 	.nav-links-container,
 	.checkout-container {
 		display: none;
-	}
+	} 
 
 	.hamburger-container {
 		display: flex;
@@ -362,7 +404,7 @@ p {
 
 
 	}
-
+*/
 
 	/*  END NAV
 ############################################################# */
