@@ -19,7 +19,6 @@ main {
 header {
 	width: 100%;
 	z-index: 1;
-	/* border-bottom: 1px solid black; */
 	margin-bottom: 5%;
 }
 
@@ -29,7 +28,7 @@ footer {
 	width: 100%;
 	padding: 3em;
 	margin: 4em 0 0;
-	background-color: blueviolet;
+	background-color:  rgba(71, 163, 179, 0.5);
 }
 
 img {
@@ -39,15 +38,14 @@ img {
 
 header>nav {
 	padding: .5em 0;
-	background-color: rgb(89, 79, 179);
+	background-color: rgba(71, 163, 179, 0.5);
 	width: 100%;
 	font-size: 1.3em;
 }
 
-header>nav>ul {
+header>nav ul {
 	height: 100%;
 	width: 100%;
-
 }
 
 header>nav>ul li,
@@ -57,6 +55,7 @@ header>nav>ul a {
 	color: black;
 	text-transform: uppercase;
 	display: inline-block;
+	padding: .5em;
 }
 
 nav .nav-link:hover,
@@ -87,13 +86,14 @@ nav .nav-link:focus {
 	text-align: center;
 }
 
+/*
 header>nav>ul li a {
 	padding: 0 .5em;
-}
+} */
 
 .menu-logo {
 	font-weight: 900;
-
+	padding: 0;
 }
 
 .nav-logo-container {
@@ -129,8 +129,24 @@ header>nav>ul li a {
 
 .menu-checkout {}
 
+.padding-r-05em {
+	padding: 0 .5em;
+
+}
+
+.nav-links-container>li:first-child,
+.checkout-container>li:first-child {
+	padding: 0 .5em;
+	/* border: 2px solid red; */
+}
+
+#text {
+	display: none;
+}
+
 .menu-item+.menu-item,
 .menu-basket+.menu-checkout {
+	padding: 0 calc(.5em + 1px) 0 .5em;
 	border-left: 1px solid rgba(125, 125, 125, 0.4);
 }
 
@@ -304,7 +320,7 @@ p {
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
 
-/*  NAV
+	/*  NAV
 ############################################################# */
 
 	nav {
@@ -316,9 +332,9 @@ p {
 
 	nav .nav-link:hover,
 	nav .nav-link:focus {
-	background-color: none;
-	border-radius: none;
-}
+		background-color: none;
+		border-radius: none;
+	}
 
 	.menu-container,
 	.nav-links-container,
@@ -343,15 +359,15 @@ p {
 	.hamburger-checkbox:checked {
 
 		color: red;
-		
-		
-	}
-	
 
-/*  END NAV
+
+	}
+
+
+	/*  END NAV
 ############################################################# */
 
-/*  HERO
+	/*  HERO
 ############################################################# */
 
 	.section-hero {
@@ -360,9 +376,7 @@ p {
 
 	}
 
-	.hero-container {
-
-	}
+	.hero-container {}
 
 	.hero-text {
 		font-size: 2em;
@@ -398,8 +412,8 @@ p {
 	nav .nav-link:focus {
 		background-color: rgba(0, 0, 0, 0);
 
-	
-}
+
+	}
 
 	.section-news-items-1,
 	.section-news-items-2 {
@@ -421,6 +435,7 @@ p {
 	}
 
 }
+
 /* END Tablet rules
 #############################################################
 ############################################################# */
