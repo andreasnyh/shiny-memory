@@ -295,6 +295,7 @@ header>nav>ul li a {
 
 * {
 	font-family: Helvetica, Arial, sans-serif;
+	
 }
 
 h1 {
@@ -305,13 +306,22 @@ h2 {
 	font-size: 2em;
 }
 
+.section-news h2 {
+	margin: 1em;
+}
+
 h3 {
 	font-size: 1.5em;
 	margin: 10px;
 }
 
+.section-news>h3 {
+	margin: 2em 0 1em 0;
+}
+
 p {
 	margin: 10px;
+	line-height: 1.5;
 }
 
 /*  END TYPOGRAPHY
@@ -377,12 +387,17 @@ p {
 	/*  END NAV
 ############################################################# */
 
-	/*  HERO
+	/*  HERO & NEWS
 ############################################################# */
 
 	.section-hero {
 		margin-top: 5em;
 
+	}
+
+	.news-video iframe {
+		width: 768px;
+		height: 432px;
 	}
 
 	.hero-text {
@@ -405,6 +420,11 @@ p {
 		flex-shrink: 0;
 		flex-grow: 0;
 		margin-bottom: 1em;
+		border: none;
+	}
+
+	.news-article + .news-article {
+		border: none;
 	}
 
 }
@@ -425,6 +445,11 @@ p {
 		margin-top: 3em;
 	}
 
+	.news-video iframe {
+		width: 1024px;
+		height: 576px;
+	}
+
 	.section-news-items-1,
 	.section-news-items-2 {
 		display: flex;
@@ -442,6 +467,11 @@ p {
 		flex-shrink: 0;
 		flex-grow: 0;
 		margin: 0 .5em 1em;
+		border: none;
+	}
+
+	.news-article + .news-article {
+		border: none;
 	}
 
 }
@@ -458,4 +488,102 @@ p {
 	background-color: white;
 	border-radius: .5em;
 }
+}
+
+
+/* Iphone rules for Portrait mode
+#############################################################
+############################################################# */
+
+@media only screen and (max-width: 375px) and (orientation: portrait) {
+
+	/*  NAV
+############################################################# */
+
+
+	nav ul {
+		position: fixed;
+		top: 0;
+		z-index: 3;
+		/* background-color: var(--color-primary-50); */
+	}
+
+	nav::after {
+		content: '';
+		position: fixed;
+		z-index: 2;
+		top: 0;
+		bottom: 0;
+		width: 100vw;
+		height: 4em;
+		background-color: var(--color-primary-50);
+	}
+
+	header>nav {
+		display: flex;
+		height: 4em;
+		justify-content: space-between;
+		font-size: 80%;
+	}
+
+	.nav-links-container {
+		display: none;
+
+	}
+
+	.nav-links-container-handheld {
+		display: inline-block;
+		position: absolute;
+		width: 100vw;
+		text-align: center;
+		top: 4.5em;
+		background-color: transparent;
+		z-index: 1;
+	}
+
+	.checkout-container {
+		right: 0;
+	}
+
+
+	/*  END NAV
+############################################################# */
+
+	/*  HERO & NEWS
+############################################################# */
+
+	.section-hero {
+		margin-top: 5em;
+
+	}
+
+	.news-video iframe {
+		width: 375px;
+		height: 210px;
+	}
+
+	.hero-text {
+		font-size: 2.5em;
+	}
+
+	.section-news-items-1,
+	.section-news-items-2 {
+		display: flex;
+		width: 95%;
+		height: auto;
+		margin: 0 auto;
+		flex-flow: row wrap;
+		justify-content: space-around;
+	}
+
+	.news-article {
+		position: relative;
+		margin-bottom: 1em;
+		border: none;
+	}
+
+	.news-article + .news-article {
+		border: none;
+	}
+
 }
