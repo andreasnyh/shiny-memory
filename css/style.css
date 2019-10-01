@@ -186,8 +186,10 @@ header>nav>ul li a {
 .hero-container::after {
 	content: "";
 	background-color: slategray;
-	background-image: url("../media/camera_full_001.jpg");
-	background-position: 0 75%;
+	/* background-image: url("../media/camera_full_001.jpg"); */
+	/* background-position: 0 75%; */
+	background-image: url("../media/chris-lawton-C1rsRsMz-cQ-unsplash.jpg"); /* Testing new bkg*/
+	background-position: 0 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	opacity: .5;
