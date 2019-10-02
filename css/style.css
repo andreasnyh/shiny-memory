@@ -45,6 +45,10 @@ footer ul {
 	width: 100%;
 }
 
+footer ul li {
+	/* display: inline-block */
+}
+
 footer ul li + li {
 	margin: 0.25em;
 	outline: red solid 1px;
@@ -384,8 +388,8 @@ p {
 		z-index: 3;
 		/* background-color: var(--color-primary-50); */
 	}
-/* 
-	nav::after {
+ 
+	nav::after { /* Menu background */
 		content: '';
 		position: fixed;
 		z-index: 2;
@@ -394,7 +398,7 @@ p {
 		width: 100vw;
 		height: 4em;
 		background-color: var(--color-primary-50);
-	} */
+	} 
 
 	header>nav {
 		display: flex;
@@ -487,7 +491,7 @@ p {
 	header {
 		position: fixed;
 	}
-	
+
 	header > nav {
 		position: fixed;
 		z-index: 3;
