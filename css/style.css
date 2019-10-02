@@ -8,7 +8,7 @@
 
 :root {
 	--color-primary-50: hsl(189, 43%, 80%);
-	--color-primary-100: rgba(71, 163, 179, 1);
+	--color-primary-100: hsl(189, 43%, 60%);
 }
 
 body {
