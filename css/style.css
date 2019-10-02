@@ -6,26 +6,134 @@
 	/* user-select: none; */
 }
 
+/* Variabler */
 :root {
 	--color-primary-50: hsl(189, 43%, 80%);
 	--color-primary-100: hsl(189, 43%, 60%);
 }
 
-body {
-	position: relative;
-
-}
-
-main {
-	position: relative;
-	padding-bottom: 4em;
-}
-
+/* HEADER / NAV / HERO
+#############################################################
+############################################################# */
 header {
 	width: 100%;
 	z-index: 1;
-	margin-bottom: 5%;
 }
+
+header>nav {
+	display: flex;
+	padding: .5em 0;
+	background-color: var(--color-primary-50);
+	width: 100%;
+	font-size: 1.3em;
+	margin-bottom: 1em;
+}
+
+/* Set nav ul to full width */
+header>nav ul {
+	width: 100%;
+}
+
+header>nav>ul li,
+header>nav>ul a {
+	list-style: none;
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: .5em;
+}
+
+/* ########################## - NAV - ################################ */
+
+/* Set line-height & text align of nav to center text */
+.nav-logo-container,
+.nav-links-container,
+.checkout-container {
+	line-height: 3em;
+	text-align: center;
+}
+
+/* Width of logo and payment containers */
+.nav-logo-container,
+.checkout-container {
+	width: 13em;
+}
+
+/* Links width 100% - nav+checkout-container */
+.nav-links-container {
+	width: calc(100% - 26em);
+}
+
+/* Hide menu for handheld */
+.nav-links-container-handheld {
+	display: none;
+}
+
+/* Center payment icons */
+.checkout-container {
+	line-height: 0;
+}
+
+/* Set size and padding for basket and payment icons */
+.checkout-icon {
+	height: 3em;
+	padding: .5em;
+}
+
+/*  */
+.menu-item+.menu-item,
+.menu-basket+.menu-checkout {
+	padding: 0 calc(.5em + 1px) 0 .5em;
+	border-left: 1px solid rgba(125, 125, 125, 0.4);
+}
+
+/* ########################## - HERO - ################################ */
+
+.section-hero {
+	width: 100vw;
+	height: 30em;
+	position: relative;
+	background: linear-gradient(25deg, rgba(71, 163, 179, 0.5), rgb(255, 213, 179, .5));
+	user-select: none;
+}
+
+.hero-container {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Adds hero background */
+.hero-container::after {
+	content: "";
+	background-color: slategray;
+	background-image: url("../media/chris-lawton-C1rsRsMz-cQ-unsplash.jpg"); /* Testing new bkg*/
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: .5;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	top: 0;
+	left: 0;
+
+}
+
+.hero-text {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	font-size: 4em;
+}
+
+/* ########################## - HERO - ################################ */
+
+
 
 footer {
 	display: flex;
@@ -45,10 +153,6 @@ footer ul {
 	width: 100%;
 }
 
-footer ul li {
-	/* display: inline-block */
-}
-
 footer ul li + li {
 	margin: 0.25em;
 	outline: red solid 1px;
@@ -59,45 +163,8 @@ img {
 	height: auto;
 }
 
-header>nav {
-	display: flex;
-	padding: .5em 0;
-	background-color: var(--color-primary-50);
-	width: 100%;
-	font-size: 1.3em;
-}
 
-header>nav ul {
-	/* height: 100%; */
-	width: 100%;
-}
-
-header>nav>ul li,
-header>nav>ul a {
-	list-style: none;
-	text-decoration: none;
-	color: black;
-	text-transform: uppercase;
-	display: inline-block;
-	padding: .5em;
-}
-
-/* nav .nav-link:hover,
-nav .nav-link:focus {
-	background-color: white;
-	border-radius: .5em;
-} */
-
-.nav-links-container-handheld {
-	display: none;
-}
-
-.checkout-icon {
-	height: 3em;
-	padding: .5em;
-	/* border: 1px solid red; */
-}
-
+/* Class for shadow */
 .shadow {
 	box-shadow: 0 0 1em .25em rgba(125, 125, 125, 0.25);
 }
@@ -106,101 +173,10 @@ nav .nav-link:focus {
 #############################################################
 ############################################################# */
 
-.nav-logo-container,
-.nav-links-container,
-.checkout-container {
-	display: inline-block;
-	line-height: 3em;
-	text-align: center;
-}
-
-/*
-header>nav>ul li a {
-	padding: 0 .5em;
-} */
-
-.menu-logo {
-	font-weight: 900;
-	padding: 0;
-}
-
-.nav-logo-container,
-.checkout-container {
-	width: 11em;
-}
-
-.nav-links-container {
-	width: calc(100% - 22em);
-	margin: 0 auto;
-
-
-}
-
-.checkout-container {
-	line-height: 0;
-}
 
 /* END NAV FLEX SPACING
 #############################################################
 ############################################################# */
-
-.padding-r-05em {
-	padding: 0 .5em;
-
-}
-
-.nav-links-container>li:first-child,
-.checkout-container>li:first-child {
-	padding: 0 .5em;
-	/* border: 2px solid red; */
-}
-
-.menu-item+.menu-item,
-.menu-basket+.menu-checkout {
-	padding: 0 calc(.5em + 1px) 0 .5em;
-	border-left: 1px solid rgba(125, 125, 125, 0.4);
-}
-
-.section-hero {
-	width: 100vw;
-	height: 20em;
-	position: relative;
-	background: linear-gradient(25deg, rgba(71, 163, 179, 0.5), rgb(255, 213, 179, .5));
-	user-select: none;
-}
-
-.hero-container {
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.hero-text {
-	font-family: Arial, Helvetica, sans-serif;
-	text-align: center;
-	text-transform: uppercase;
-	position: relative;
-}
-
-.hero-container::after {
-	content: "";
-	background-color: slategray;
-	/* background-image: url("../media/camera_full_001.jpg"); */
-	/* background-position: 0 75%; */
-	background-image: url("../media/chris-lawton-C1rsRsMz-cQ-unsplash.jpg"); /* Testing new bkg*/
-	background-position: 0 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	opacity: .5;
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	z-index: -1;
-	top: 0;
-	left: 0;
-
-}
 
 .section-news {
 	margin: 6rem 0;
@@ -246,6 +222,7 @@ header>nav>ul li a {
 	width: 80%;
 	margin: 6rem auto;
 	height: auto;
+	padding-bottom: 4em;
 }
 
 .main-section-container {
@@ -397,7 +374,7 @@ p {
 
 	header>nav {
 		display: flex;
-		height: 4em;
+		height: 5em;
 		justify-content: space-between;
 
 	}
@@ -416,7 +393,7 @@ p {
 		position: absolute;
 		width: 100vw;
 		text-align: center;
-		top: 4.5em;
+		top: 5.25em;
 		background-color: transparent;
 		z-index: 1;
 	}
@@ -543,7 +520,7 @@ p {
 
 
 
-@media only screen and (min-width: 1441px) and (orientation: landscape) {
+@media only screen and (min-width: 1025px) and (orientation: landscape) {
 
 	nav .nav-link:hover,
 	nav .nav-link:focus {
