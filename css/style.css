@@ -120,7 +120,7 @@ footer h5 {
 ############################################################# */
 
 header {
-	width: 100%;
+	width: 100vw;
 	z-index: 1;
 }
 
@@ -128,13 +128,13 @@ header>nav {
 	display: flex;
 	padding: .5rem 0;
 	background-color: var(--color-primary-50);
-	width: 100%;
+	width: 100vw;
 	height: 7rem;
 }
 
 /* Set nav ul to full width */
 header>nav ul {
-	width: 100%;
+	/* width: 100%; */
 }
 
 header>nav>ul a {
@@ -354,7 +354,7 @@ header>nav>ul a {
 footer {
 	display: flex;
 	bottom: 0;
-	width: 100%;
+	width: 100vw;
 	padding: 3rem 5rem;
 	margin: 6rem 0 0;
 	background-color: var(--color-primary-100);
