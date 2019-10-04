@@ -71,7 +71,7 @@ header>nav {
 
 .hero-text {
 	box-shadow: inset 100vw 0 rgba(0, 0, 0, 0.25);
-	width: 100vw;
+	width: 100%;
 	padding: 1rem 0;
 }
 
@@ -104,7 +104,7 @@ footer h5 {
 
 .news-article h3,
 .news-article p {
-	box-shadow: inset 100vw 0 rgba(255, 255, 255, 0.75);
+	box-shadow: inset 100% 0 rgba(255, 255, 255, 0.75);
 	margin: 0;
 	padding: .5rem;
 }
@@ -120,7 +120,7 @@ footer h5 {
 ############################################################# */
 
 header {
-	width: 100vw;
+	width: 100%;
 	z-index: 1;
 }
 
@@ -128,7 +128,7 @@ header>nav {
 	display: flex;
 	padding: .5rem 0;
 	background-color: var(--color-primary-50);
-	width: 100vw;
+	width: 100%;
 	height: 7rem;
 }
 
@@ -203,7 +203,7 @@ header>nav>ul a {
 /* ########################## - HERO - ################################ */
 
 .section-hero {
-	width: 100vw;
+	width: 100%;
 	height: 40rem;
 	position: relative;
 	background: linear-gradient(25deg, rgba(71, 163, 179, 0.5), rgb(255, 213, 179, .5));
@@ -354,7 +354,7 @@ header>nav>ul a {
 footer {
 	display: flex;
 	bottom: 0;
-	width: 100vw;
+	width: 100%;
 	padding: 3rem 5rem;
 	margin: 6rem 0 0;
 	background-color: var(--color-primary-100);
@@ -414,7 +414,7 @@ footer .service { /* Align service-list in footer to the bottom*/
 	}
 
 	.hero-container {
-		margin-top: 5rem;
+		margin-top: 7rem;
 	}
 
 	.news-video iframe {
@@ -453,12 +453,13 @@ footer .service { /* Align service-list in footer to the bottom*/
 		position: fixed;
 		z-index: 3;
 		top: 0;
+		justify-content: space-between;
 	}
 
 	.nav-logo-container,
 	.checkout-container {
-		width: 45rem;
-}
+		width: 25rem;
+	}
 
 	.nav-links-container {
 		font-size: 1.25rem;
@@ -489,6 +490,9 @@ Tablet rules for Portrait mode
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
 
+	html {
+		font-size: 16px;
+	}
 	/*  HEADER & NAV
 	############################################################# */
 
@@ -505,7 +509,7 @@ Tablet rules for Portrait mode
 		z-index: 2;
 		top: 0;
 		bottom: 0;
-		width: 100vw;
+		width: 100%;
 		height: 7rem;
 		background-color: var(--color-primary-50);
 	} 
@@ -517,7 +521,7 @@ Tablet rules for Portrait mode
 	.nav-links-container-handheld {
 		display: inline-block;
 		position: absolute;
-		width: 100vw;
+		width: 100%;
 		text-align: center;
 		top: 8.25rem;
 		background-color: transparent;
@@ -578,11 +582,11 @@ Tablet rules for Portrait mode
 	############################################################# */
 	
 	footer {
-		font-size: 1.25em;
+		font-size: 16px;
 	}
 
 	footer .service {
-		margin-top: 8.6rem;
+		margin-top: 8.6em;
 	}
 
 }
@@ -649,10 +653,11 @@ Tablet rules for Portrait mode
 #############################################################
 ############################################################# */
 
-html {
-	font-size: 12px;
-}
 @media only screen and (max-width: 767px) and (orientation: landscape) {
+
+	html {
+		font-size: 12px;
+	}
 
 	header>nav {
 		position: static;
@@ -682,7 +687,7 @@ html {
 	.nav-links-container-handheld {
 		display: inline-block;
 		position: absolute;
-		width: 100vw;
+		width: 100%;
 		text-align: center;
 		top: 7rem;
 		line-height: 5rem;
@@ -748,7 +753,7 @@ html {
 	.nav-links-container-handheld {
 		display: inline-block;
 		position: fixed;
-		width: 100vw;
+		width: 100%;
 		padding: 1rem 0;
 		text-align: center;
 		top: 7rem;
@@ -771,6 +776,10 @@ html {
 
 	/*  HERO & NEWS - PHONE PORTRAIT
 ############################################################# */
+
+	.section-hero {
+    	margin-top: 7rem;
+	}
 
 	.news-video iframe {
 		width: 90vw;

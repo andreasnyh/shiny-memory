@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <title>Stockholm Classic Camerastore</title>
+    <title id="title">Stockholm Classic Camerastore</title>
 </head>
 
 <body>
@@ -16,9 +16,9 @@
 
         <nav class="shadow">
 
-            <ul class="nav-logo-container">
+            <ul role="list" class="nav-logo-container">
                 <li class="menu-logo">
-                    <a href="#" class="home-link"  role=button>
+                    <a href="#" class="home-link"  role="button" aria-label="SCCS, startsida.">
                         <h1>
                             [ SCCS ]
                         </h1>
@@ -26,29 +26,29 @@
                 </li><!--
             --></ul>
 
-            <ul class="nav-links-container">
-                <li class="menu-item"><a href="#" class="nav-link">Kameror</a></li><!--
-                --><li class="menu-item"><a href="#" class="nav-link">Stativ</a></li><!--
-                --><li class="menu-item"><a href="#" class="nav-link">Ljus</a></li><!--
-                --><li class="menu-item"><a href="#" class="nav-link">Tillbehör</a></li><!--
+            <ul role="list" aria-label="Kategorinavigering" class="nav-links-container">
+                <li class="menu-item"><a href="#" id="cameras" class="nav-link" role="button" aria-label="Visa kameror">Kameror</a></li><!--
+                --><li class="menu-item"><a href="#" id="tripods" class="nav-link" role="button" aria-label="Visa stativ">Stativ</a></li><!--
+                --><li class="menu-item"><a href="#" id="lighting" class="nav-link" role="button" aria-label="Visa ljus">Ljus</a></li><!--
+                --><li class="menu-item"><a href="#" id="accessoies" class="nav-link" role="button" aria-label="Visa tillbehör">Tillbehör</a></li><!--
             --></ul>
 
-            <ul class="nav-links-container-handheld">
-                <li class="menu-item"><a href="#" class="nav-link">Kameror</a></li><!--
-                --><li class="menu-item"><a href="#" class="nav-link">Stativ</a></li><!--
-                --><li class="menu-item"><a href="#" class="nav-link">Ljus</a></li><!--
-                --><li class="menu-item"><a href="#" class="nav-link">Tillbehör</a></li><!--
+            <ul role="list" class="nav-links-container-handheld">
+                <li class="menu-item"><a href="#" class="nav-link" role="button" aria-labelledby="cameras">Kameror</a></li><!--
+                --><li class="menu-item"><a href="#" class="nav-link" role="button" aria-labelledby="tripods">Stativ</a></li><!--
+                --><li class="menu-item"><a href="#" class="nav-link" role="button" aria-labelledby="lighting">Ljus</a></li><!--
+                --><li class="menu-item"><a href="#" class="nav-link" role="button" aria-labelledby="accessoies">Tillbehör</a></li><!--
             --></ul>
 
-            <ul class="checkout-container">
+            <ul role="list" class="checkout-container">
                 <li class="menu-basket">
-                    <a href="#">
+                    <a href="#" role="button">
 						<img class="checkout-icon nav-link" alt="shopping basket" src="./media/001-shopping-cart.png" />
 						<!-- Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> -->
                     </a>
                 </li><!--
                 --><li class="menu-checkout">
-                    <a href="#">
+                    <a href="#" role="button">
 						<img class="checkout-icon nav-link" alt="go to checkout" src="./media/002-credit-card.png" />
 						<!-- Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> -->
                     </a>
@@ -70,7 +70,7 @@
         
 
         <article class="news-video" aria-label="Senaste videon">
-            <iframe width="720" height="405" src="https://www.youtube.com/embed/-PUzyoIvyH8" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe aria-label="Senaste videon" width="720" height="405" src="https://www.youtube.com/embed/-PUzyoIvyH8" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </article>
         
         <h3>Våra senaste produkter</h3>
@@ -217,7 +217,7 @@
     </section>
 
     <footer>
-            <ul class="contact">
+            <ul role="list" class="contact">
                 <li><h3>Kontakta SCCS:</h3></li>
                 <li>
                     <a href="mailto:scss@scss.se" aria-label="Kontakta oss via e-mail, scss@scss.se."><h5>scss@scss.se</h5></a>
@@ -233,7 +233,7 @@
                 </li>
             </ul>
 
-        <ul class="service">
+        <ul role="list" class="service">
                 <li>
                     <a href="#"><h5 role="link">Kundtjänst</h5></a>
                 </li>
