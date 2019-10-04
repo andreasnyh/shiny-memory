@@ -21,11 +21,14 @@ img {
 	height: auto;
 }
 
-/* Class for shadow */
+/* Classes for shadows */
 .shadow {
 	box-shadow: 0 0 16px 5px rgba(125, 125, 125, 0.25);
 }
 
+.shadow-small {
+	box-shadow: 0 0 8px 2.5px rgba(125, 125, 125, 0.25);
+}
 
 /*  TYPOGRAPHY
 #############################################################
@@ -130,6 +133,7 @@ header>nav {
 	background-color: var(--color-primary-50);
 	width: 100%;
 	height: 7rem;
+	justify-content: space-around;
 }
 
 /* Set nav ul to full width */
@@ -162,7 +166,7 @@ header>nav>ul a {
 /* Width of logo and payment containers */
 .nav-logo-container,
 .checkout-container {
-	width: 40rem;
+	/* width: 40rem; */
 }
 
 /* Links width 100% - nav+checkout-container */
@@ -249,6 +253,11 @@ header>nav>ul a {
 .section-news {
 	margin: 6rem 0;
 	justify-items: center;
+}
+
+.news-video iframe {
+	width: 100vw;
+	height: 70vw;
 }
 
 .section-news-items-1 {
@@ -338,14 +347,15 @@ header>nav>ul a {
 .section-pdf {
 	display: flex;
 	width: 100%;
-	/* height: 40em; */
+	height: 40rem;
 	justify-content: center;
 	margin-top: 4rem;
 }
-.pdf {
-	width: 60%;
-}
 
+.pdf {
+	width: 100%;
+	height: 100%;
+}
 
 /* FOOTER
 #############################################################
@@ -359,13 +369,13 @@ footer {
 	margin: 6rem 0 0;
 	background-color: var(--color-primary-100);
 	font-size: 1.5em;
+	justify-content: space-between;
 }
 
 footer ul {
 	list-style: none;
 	text-decoration: none;
 	text-transform: uppercase;
-	width: 100%;
 }
 
 footer ul li + li {
@@ -397,7 +407,7 @@ footer .service { /* Align service-list in footer to the bottom*/
 #############################################################
 */
 
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 1440px) and (orientation: landscape) {
 /* 
 	nav h1 {
 		font-size: 2rem;
@@ -411,10 +421,6 @@ footer .service { /* Align service-list in footer to the bottom*/
 	nav .nav-link:focus {
 	background-color: white;
 	border-radius: .5rem;
-	}
-
-	.hero-container {
-		margin-top: 7rem;
 	}
 
 	.news-video iframe {
@@ -431,8 +437,8 @@ footer .service { /* Align service-list in footer to the bottom*/
 	}
 
 	.pdf {
-		width: 85%;
-		height: 40vw;
+		width: 80%;
+		height: 55vh;
 	}
 
 	footer {
@@ -442,12 +448,16 @@ footer .service { /* Align service-list in footer to the bottom*/
 }
 
 
-/* Desktop rules wider than 1025px up to 1440px
+/* Desktop rules wider than 1024px up to 1440px
 #############################################################
 #############################################################
 */
 
-@media only screen and (min-width: 1025px) and (max-width: 1440px) and (orientation: landscape) {
+@media only screen and (min-width: 1024.1px) and (max-width: 1440px) and (orientation: landscape) {
+
+	html {
+		font-size: 14px;
+	}
 
 	header > nav {
 		position: fixed;
@@ -455,17 +465,27 @@ footer .service { /* Align service-list in footer to the bottom*/
 		top: 0;
 		justify-content: space-between;
 	}
-
+/*
 	.nav-logo-container,
 	.checkout-container {
-		width: 25rem;
+		 width: 25rem; 
 	}
-
+*/
 	.nav-links-container {
-		font-size: 1.25rem;
-		width: 45rem;
+		/* font-size: 1.25rem; */
+		/* width: 45rem; */
 	}
 
+	nav .nav-link:hover,
+	nav .nav-link:focus {
+	background-color: white;
+	border-radius: .5rem;
+	}
+
+	.section-hero {
+		margin-top: 7rem;
+		height: 30rem;
+	}
 	.section-news-items-1 {
 		height: 15em;
 	}
@@ -475,10 +495,10 @@ footer .service { /* Align service-list in footer to the bottom*/
 	}
 
 	.pdf {
-		width: 85%;
-		height: 550px;
+		width: 70%;
+		height: 100%;
 	}
-}
+} 
 
 
 /* 
@@ -489,19 +509,20 @@ Tablet rules for Portrait mode
 #############################################################
 */
 
-@media only screen and (max-width: 768px) and (orientation: portrait) {
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
 
 	html {
-		font-size: 18px;
+		font-size: 16px;
 	}
+
 	/*  HEADER & NAV
 	############################################################# */
 
-	nav ul {
+	header>nav ul{
 		position: fixed;
-		/* top: 0; */
+		display: flex;
+		justify-content: space-between;
 		z-index: 3;
-		/* background-color: var(--color-primary-50); */
 	}
  
 	nav::after { /* Menu background */
@@ -521,19 +542,22 @@ Tablet rules for Portrait mode
 
 	.nav-links-container-handheld {
 		display: inline-block;
-		position: absolute;
+		position: fixed;
 		width: 100%;
+		padding: 1rem 0;
 		text-align: center;
-		top: 9rem;
-		background-color: transparent;
-		z-index: 1;
+		top: 7rem;
+		background-color: whitesmoke;
+		line-height: 5rem;
+		z-index: 2;
+		font-size: 2rem;
 	}
-
+/*
 	.nav-logo-container,
 	.checkout-container {
 		width: 22rem;
 	}
-
+*/
 	.nav-logo-container {
 		left: 0;
 	}
@@ -549,11 +573,11 @@ Tablet rules for Portrait mode
 	.section-hero {
 		margin-top: 5rem;
 	}
-
+/* 
 	.news-video iframe {
 		width: 90vw;
 		height: 50vw;
-	}
+	} */
 
 	.section-news-items-1 {
 		width: 100%;
@@ -566,7 +590,7 @@ Tablet rules for Portrait mode
 	.news-article {
 		height: 18rem;
 		width: 18rem;
-		margin-bottom: 1.5rem;
+		margin: 3rem 0;
 		border: none;
 	}
 
@@ -575,8 +599,8 @@ Tablet rules for Portrait mode
 	}
 
 	.pdf {
-		width: 95%;
-		height: 550px;
+		width: 80%;
+		/* height: 40vh; */
 	}
 
 	/* Footer Tablet portrait
@@ -587,30 +611,38 @@ Tablet rules for Portrait mode
 	}
 
 	footer .service {
-		margin-top: 8.6em;
+		margin-top: 3.5rem;
 	}
 
 }
 
 /* TABLET RULES FOR LANDSCAPE
-#############################################################
-#############################################################
+##########################################################################################################################
+##########################################################################################################################
 */
 
-@media screen and (min-width: 769px) and (max-width: 1024px) /* and (orientation: landscape)*/ {
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+	html {
+			font-size: 10px;
+		}
 
 	/*  HEADER & NAV Tablet landscape
 	############################################################# */
-	html {
-		font-size: 10px;
+	
+	nav {
+		position: fixed;
+		/* top: 0; */
+		z-index: 3;
+		/* background-color: var(--color-primary-50); */
 	}
 
 	/*  HERO & NEWS Tablet portrait
 	############################################################# */
 
 	.news-video iframe {
-		width: 95%;
-		height: 576px;
+		width: 70%;
+		height: 50vh;
 	}
 
 	.section-news-items-1 {
@@ -624,18 +656,18 @@ Tablet rules for Portrait mode
 	.news-article {
 		height: 25rem;
 		width: 25rem;
-		margin: 1rem;
+		/* margin: 1rem; */
 	}
 
 	.news-article + .news-article {
 		border: none;
 	}
-
+/* 
 	.pdf {
-		width: 85%;
-		height: 550px;
+		width: 100%;
+		height: 100%;
 	}
-	
+	 */
 	footer .service { /* Align service-list in footer to the bottom*/
 		margin-top: 2.3em;
 	}
@@ -657,7 +689,7 @@ Tablet rules for Portrait mode
 @media only screen and (max-width: 767px) and (orientation: landscape) {
 
 	html {
-		font-size: 12px;
+		font-size: 10px;
 	}
 
 	header>nav {
@@ -675,12 +707,12 @@ Tablet rules for Portrait mode
 		z-index: 3;
 		/* background-color: var(--color-primary-50); */
 	}
-
+/* 
 	.nav-logo-container,
 	.checkout-container {
 		width: 22rem;
 	}
-
+ */
 	.nav-links-container {
 		display: none; 
 	}
@@ -698,6 +730,7 @@ Tablet rules for Portrait mode
 
 	.section-hero {
 		margin-top: 5rem;
+		height: 50vh;
 	}
 
 	.hero-container {
@@ -708,16 +741,21 @@ Tablet rules for Portrait mode
 		font-size: 3rem;
 	}
 
-	.news-video iframe {
-		width: 90vw;
-		height: 50vw;
-	}
-
 	.news-article {
 		font-size: 2rem;
 		height: 18rem;
 		width: 18rem;
 	}
+	
+	.section-pdf {
+		height: 60vh;
+	}
+
+	.pdf {
+		width: 70%;
+		height: 100%;
+	}
+
 }
 
 
@@ -730,7 +768,7 @@ Tablet rules for Portrait mode
 
 
 	html {
-		font-size: 10px;
+		font-size: 8px;
 	}	
 	
 	/*  HEADER & NAV
@@ -741,12 +779,12 @@ Tablet rules for Portrait mode
 		/* top: .5rem; */
 		z-index: 3;
 	} 
-
+/*
 	.nav-logo-container,
 	.checkout-container {
-		width: 17rem;
+		 width: 17rem; 
 	}
-
+*/
 	.nav-links-container {
 		display: none;
 	}
@@ -763,28 +801,16 @@ Tablet rules for Portrait mode
 		z-index: 1;
 	}
 
-	nav h1 {
-		font-size: 2.75rem;
-	}
-
-	.checkout-container {
-		right: 0;
-	}
-
-	.checkout-icon{
-		padding: 1.5rem 0;
-	}
-
 	/*  HERO & NEWS - PHONE PORTRAIT
 ############################################################# */
 
 	.section-hero {
-    	margin-top: 7rem;
+		margin-top: 7rem;
+		height: 30vh;
 	}
 
 	.news-video iframe {
 		width: 90vw;
-		height: 50vw;
 	}
 
 	.section-news-items-1 {
@@ -833,17 +859,13 @@ Tablet rules for Portrait mode
 		padding-right: 0;
 	}
 
-	.pdf {
-		width: 95%;
-		height: 40rem;
-	}
 
 	footer {
-		padding: 3rem 1.5rem;
+		padding: 3rem 4rem;
 	}
 
 	footer .service { /* top margin Mobile */
-		margin-top: 6.5rem;
+		margin-top: 3.5rem;
 	}
 
 	footer h5 {
