@@ -14,7 +14,7 @@
 <body>
     <header class="shadow">
 
-        <nav class="shadow" aria-label="Huvudnavigering">
+        <nav class="shadow">
 
             <ul class="nav-logo-container">
                 <li class="menu-logo">
@@ -42,13 +42,13 @@
 
             <ul class="checkout-container">
                 <li class="menu-basket">
-                    <a href="#" role="button" class="nav-link">
-						<img class="checkout-icon " alt="visa produktkorg" src="./media/001-shopping-cart.png" />
+                    <a href="#" role="button" class="nav-link" aria-label="Visa produkter i kundkorgen">
+						<img class="checkout-icon " alt="visa kundkorg" src="./media/001-shopping-cart.png" />
 						<!-- Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> -->
                     </a>
                 </li><!--
                 --><li class="menu-checkout">
-                    <a href="#" role="button"  class="nav-link">
+                    <a href="#" role="button"  class="nav-link" aria-label="Gå till kassan">
 						<img class="checkout-icon" alt="gå till kassa" src="./media/002-credit-card.png" />
 						<!-- Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> -->
                     </a>
@@ -57,7 +57,7 @@
         </nav>
         <section class="section-hero">
             <article class="hero-container">
-                <h2 class="hero-text">STHLM Classic Camera Store</h2>
+                <h2 class="hero-text" lang="en">STHLM Classic Camera Store</h2>
             </article>
         </section>
     </header>
@@ -68,9 +68,9 @@
     <section class="section-news" aria-labelledby="news" tabindex="0">
         <h2 id="news">Nyheter</h2>
         
-        <article class="news-video">
-            <h3 title="Our latest video">Our latest video</h3>
-            <iframe src="https://www.youtube.com/embed/-PUzyoIvyH8?html5=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <article class="news-video" tabindex="0" aria-labelledby="latest-video" >
+            <h3 id="latest-video">Vår senaste video</h3>
+            <iframe title="Vår senaste video" src="https://www.youtube.com/embed/-PUzyoIvyH8?html5=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </article>
         
         <h3>Våra senaste produkter</h3>
@@ -212,10 +212,10 @@
                 <li>
                     <a href="mailto:scss@scss.se" aria-label="Kontakta oss via e-mail, scss@scss.se."><h4>scss@scss.se</h4></a>
                 </li>
-                <li aria-label="Ring oss på: 08-123 123 12" tabindex="0">
-                    <h4>08-123 123 12</h4>
+                <li>
+                    <h4 aria-label="Ring oss på: 08-123 123 12">08-123 123 12</h4>
                 </li>
-                <li aria-label="Butiken ligger på StreetInStockholm 22, 123 45 STOCKHOLM, SWEDEN" tabindex="0">
+                <li aria-label="Butiken ligger på StreetInStockholm 22, 123 45 STOCKHOLM, SWEDEN">
                     <h4>StreetInStockholm 22</h4>
                 </li>
                 <li>

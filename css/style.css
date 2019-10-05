@@ -427,6 +427,10 @@ footer .service { /* Align service-list in footer to the bottom*/
 	border-radius: .5rem;
 	}
 
+	.section-hero {
+		height: 30rem;
+	}
+	
 	.news-video iframe {
 		width: 70vw;
 		height: 40vw;
@@ -556,7 +560,7 @@ Tablet rules for Portrait mode
 		width: 100%;
 		padding: 1rem 0;
 		text-align: center;
-		top: 7rem;
+		top: 6.9rem;
 		background-color: whitesmoke;
 		line-height: 5rem;
 		z-index: 2;
