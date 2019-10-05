@@ -36,7 +36,7 @@ img {
 
 * {
 	font-family: 'Roboto', sans-serif;
-	
+
 }
 
 p {
@@ -99,7 +99,7 @@ header>nav {
 	padding: .5rem;
 }
 
-.main-section-container > h2 {
+.main-section-container>h2 {
 	width: 100%;
 	text-align: center;
 	margin: 2rem;
@@ -152,13 +152,14 @@ header>nav ul {
 header>nav>ul a {
 	padding: 0 1rem;
 }
+
 header>nav>ul li,
 header>nav>ul a {
 	list-style: none;
 	text-decoration: none;
 	text-transform: uppercase;
 	display: inline-block;
-	
+
 }
 
 /* ########################## - NAV - ################################ */
@@ -233,7 +234,8 @@ header>nav>ul a {
 .hero-container::after {
 	content: "";
 	background-color: slategray;
-	background-image: url("../media/chris-lawton-C1rsRsMz-cQ-unsplash.jpg"); /* Testing new bkg*/
+	background-image: url("../media/chris-lawton-C1rsRsMz-cQ-unsplash.jpg");
+	/* Testing new bkg*/
 	background-position: 0 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -319,6 +321,7 @@ header>nav>ul a {
 	flex-flow: row wrap;
 	justify-content: space-evenly;
 }
+
 /* 
 .main-section-container .main-article:nth-child(odd) {
 	margin-left: 0;
@@ -336,6 +339,7 @@ header>nav>ul a {
 	min-width: calc(50% - 1.5rem);
 	max-width: calc(50% - 1.5rem);
 }
+
 /* 
 .main-article+.main-article {
 	margin-left: 3rem;
@@ -386,12 +390,13 @@ footer ul {
 	text-transform: uppercase;
 }
 
-footer ul li + li {
-	margin: 0.5rem 0;
+footer ul li+li {
+	margin: 1rem 0;
 	/* outline: red solid 1px; */
 }
 
-footer .service { /* Align service-list in footer to the bottom*/
+footer .service {
+	/* Align service-list in footer to the bottom*/
 	margin-top: 3.5rem;
 	text-align: right;
 }
@@ -423,14 +428,14 @@ footer .service { /* Align service-list in footer to the bottom*/
 
 	nav .nav-link:hover,
 	nav .nav-link:focus {
-	background-color: white;
-	border-radius: .5rem;
+		background-color: white;
+		border-radius: .5rem;
 	}
 
 	.section-hero {
 		height: 30rem;
 	}
-	
+
 	.news-video iframe {
 		width: 70vw;
 		height: 40vw;
@@ -439,7 +444,7 @@ footer .service { /* Align service-list in footer to the bottom*/
 	.section-news-items-1 {
 		height: 30rem;
 	}
-	
+
 	.news-article {
 		width: 30rem;
 	}
@@ -467,13 +472,14 @@ footer .service { /* Align service-list in footer to the bottom*/
 		font-size: 14px;
 	}
 
-	header > nav {
+	header>nav {
 		position: fixed;
 		z-index: 3;
 		top: 0;
 		justify-content: space-between;
 	}
-/*
+
+	/*
 	.nav-logo-container,
 	.checkout-container {
 		 width: 25rem; 
@@ -486,8 +492,8 @@ footer .service { /* Align service-list in footer to the bottom*/
 
 	nav .nav-link:hover,
 	nav .nav-link:focus {
-	background-color: white;
-	border-radius: .5rem;
+		background-color: white;
+		border-radius: .5rem;
 	}
 
 	.section-hero {
@@ -499,11 +505,11 @@ footer .service { /* Align service-list in footer to the bottom*/
 		width: 70vw;
 		height: 40vw;
 	}
-	
+
 	.section-news-items-1 {
 		height: 15em;
 	}
-	
+
 	.news-article {
 		width: 15em;
 	}
@@ -512,7 +518,7 @@ footer .service { /* Align service-list in footer to the bottom*/
 		width: 70%;
 		height: 100%;
 	}
-} 
+}
 
 
 /* 
@@ -532,14 +538,15 @@ Tablet rules for Portrait mode
 	/*  HEADER & NAV
 	############################################################# */
 
-	header>nav ul{
+	header>nav ul {
 		position: fixed;
 		display: flex;
 		justify-content: space-between;
 		z-index: 3;
 	}
- 
-	header>nav::after { /* Menu background */
+
+	header>nav::after {
+		/* Menu background */
 		content: '';
 		position: fixed;
 		z-index: 2;
@@ -548,7 +555,7 @@ Tablet rules for Portrait mode
 		width: 100%;
 		height: 7rem;
 		background-color: var(--color-primary-50);
-	} 
+	}
 
 	.nav-links-container {
 		display: none;
@@ -566,7 +573,8 @@ Tablet rules for Portrait mode
 		z-index: 2;
 		font-size: 2rem;
 	}
-/*
+
+	/*
 	.nav-logo-container,
 	.checkout-container {
 		width: 22rem;
@@ -587,7 +595,8 @@ Tablet rules for Portrait mode
 	.section-hero {
 		margin-top: 5rem;
 	}
-/* 
+
+	/* 
 	.news-video iframe {
 		width: 90vw;
 		height: 50vw;
@@ -608,7 +617,7 @@ Tablet rules for Portrait mode
 		border: none;
 	}
 
-	.news-article + .news-article {
+	.news-article+.news-article {
 		border: none;
 	}
 
@@ -619,7 +628,7 @@ Tablet rules for Portrait mode
 
 	/* Footer Tablet portrait
 	############################################################# */
-	
+
 	footer {
 		font-size: 16px;
 	}
@@ -638,17 +647,20 @@ Tablet rules for Portrait mode
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
 	html {
-			font-size: 14px;
-		}
+		font-size: 12px;
+	}
 
 	/*  HEADER & NAV Tablet landscape
 	############################################################# */
-	
+
 	header>nav {
 		position: fixed;
-		/* top: 0; */
 		z-index: 3;
 		/* background-color: var(--color-primary-50); */
+	}
+
+	header h1 {
+		font-size: 2rem;
 	}
 
 	/*  HERO & NEWS Tablet portrait
@@ -673,7 +685,7 @@ Tablet rules for Portrait mode
 		/* margin: 1rem; */
 	}
 
-	.news-article + .news-article {
+	.news-article+.news-article {
 		border: none;
 	}
 
@@ -681,7 +693,8 @@ Tablet rules for Portrait mode
 		width: 80%;
 	}
 
-	footer .service { /* Align service-list in footer to the bottom*/
+	footer .service {
+		/* Align service-list in footer to the bottom*/
 		margin-top: 2.3em;
 	}
 }
@@ -710,24 +723,26 @@ Tablet rules for Portrait mode
 		display: flex;
 		justify-content: space-between;
 	}
-	
+
 	nav h1 {
 		font-size: 3rem;
 	}
+
 	nav ul {
 		position: inherit;
 		top: 0;
 		z-index: 3;
 		/* background-color: var(--color-primary-50); */
 	}
-/* 
+
+	/* 
 	.nav-logo-container,
 	.checkout-container {
 		width: 22rem;
 	}
  */
 	.nav-links-container {
-		display: none; 
+		display: none;
 	}
 
 	.nav-links-container-handheld {
@@ -738,7 +753,7 @@ Tablet rules for Portrait mode
 		top: 7rem;
 		line-height: 5rem;
 		background-color: whitesmoke;
-		z-index: 1; 
+		z-index: 1;
 	}
 
 	.section-hero {
@@ -759,7 +774,7 @@ Tablet rules for Portrait mode
 		height: 18rem;
 		width: 18rem;
 	}
-	
+
 	.section-pdf {
 		height: 60vh;
 	}
@@ -782,8 +797,12 @@ Tablet rules for Portrait mode
 
 	html {
 		font-size: 8px;
-	}	
-	
+	}
+
+	p {
+		font-size: 2rem;
+	}
+
 	/*  HEADER & NAV
 ############################################################# */
 
@@ -791,8 +810,9 @@ Tablet rules for Portrait mode
 		position: fixed;
 		/* top: .5rem; */
 		z-index: 3;
-	} 
-/*
+	}
+
+	/*
 	.nav-logo-container,
 	.checkout-container {
 		 width: 17rem; 
@@ -812,6 +832,7 @@ Tablet rules for Portrait mode
 		background-color: whitesmoke;
 		line-height: 5rem;
 		z-index: 1;
+		font-size: 1.5rem;
 	}
 
 	/*  HERO & NEWS - PHONE PORTRAIT
@@ -839,7 +860,7 @@ Tablet rules for Portrait mode
 
 	.main-main {
 		width: 90%;
-		background-image: none; 
+		background-image: none;
 	}
 
 	.main-section-container {
@@ -858,31 +879,31 @@ Tablet rules for Portrait mode
 		text-align: center;
 	}
 
-	.main-article + .main-article {
+	.main-article+.main-article {
 		padding: 0;
-		margin: 3em 0 0 0;
+		margin: 6rem 0 0 0;
 	}
 
 	.main-section-container .main-article:nth-child(odd) {
 		margin-left: 0;
 		padding-left: 0;
 	}
-	
+
 	.main-section-container .main-article:nth-child(even) {
 		padding-right: 0;
 	}
 
 
 	footer {
-		padding: 3rem 4rem;
+		padding: 3rem 2rem;
 	}
 
-	footer .service { /* top margin Mobile */
+	footer .service {
+		/* top margin Mobile */
 		margin-top: 3.5rem;
 	}
 
-	footer h5 {
-		font-size: 1.25rem;
+	footer h4 {
+		font-size: 1.5rem;
 	}
 }
-
