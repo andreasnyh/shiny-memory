@@ -18,7 +18,7 @@
 
             <ul role="list" class="nav-logo-container">
                 <li class="menu-logo">
-                    <a href="#" class="home-link"  role="button" aria-label="SCCS, startsida.">
+                    <a href="#" class="home-link"  role="button" aria-label="SCCS, startsida" tabindex="1">
                         <h1>
                             [ SCCS ]
                         </h1>
@@ -27,28 +27,28 @@
             --></ul>
 
             <ul role="list" aria-label="Kategorinavigering" class="nav-links-container">
-                <li class="menu-item"><a href="#" id="cameras" class="nav-link" role="button" aria-label="Visa kameror">Kameror</a></li><!--
-                --><li class="menu-item"><a href="#" id="tripods" class="nav-link" role="button" aria-label="Visa stativ">Stativ</a></li><!--
-                --><li class="menu-item"><a href="#" id="lighting" class="nav-link" role="button" aria-label="Visa ljus">Ljus</a></li><!--
-                --><li class="menu-item"><a href="#" id="accessoies" class="nav-link" role="button" aria-label="Visa tillbehör">Tillbehör</a></li><!--
+                <li class="menu-item"><a href="#" id="cameras" class="nav-link" role="button" aria-label="Visa kameror" tabindex="2">Kameror</a></li><!--
+                --><li class="menu-item"><a href="#" id="tripods" class="nav-link" role="button" aria-label="Visa stativ" tabindex="3">Stativ</a></li><!--
+                --><li class="menu-item"><a href="#" id="lighting" class="nav-link" role="button" aria-label="Visa ljus och blixtar" tabindex="4">Ljus</a></li><!--
+                --><li class="menu-item"><a href="#" id="accessoies" class="nav-link" role="button" aria-label="Visa tillbehör" tabindex="5">Tillbehör</a></li><!--
             --></ul>
 
             <ul role="list" class="nav-links-container-handheld">
-                <li class="menu-item"><a href="#" class="nav-link" role="button" aria-labelledby="cameras">Kameror</a></li><!--
-                --><li class="menu-item"><a href="#" class="nav-link" role="button" aria-labelledby="tripods">Stativ</a></li><!--
-                --><li class="menu-item"><a href="#" class="nav-link" role="button" aria-labelledby="lighting">Ljus</a></li><!--
-                --><li class="menu-item"><a href="#" class="nav-link" role="button" aria-labelledby="accessoies">Tillbehör</a></li><!--
+                <li class="menu-item"><a href="#" class="nav-link" role="button" aria-labelledby="cameras" tabindex="2">Kameror</a></li><!--
+                --><li class="menu-item"><a href="#" class="nav-link" role="button" aria-labelledby="tripods" tabindex="3">Stativ</a></li><!--
+                --><li class="menu-item"><a href="#" class="nav-link" role="button" aria-labelledby="lighting" tabindex="4">Ljus</a></li><!--
+                --><li class="menu-item"><a href="#" class="nav-link" role="button" aria-labelledby="accessoies" tabindex="5">Tillbehör</a></li><!--
             --></ul>
 
             <ul role="list" class="checkout-container">
                 <li class="menu-basket">
-                    <a href="#" role="button" class="nav-link">
+                    <a href="#" role="button" class="nav-link" tabindex="6">
 						<img class="checkout-icon " alt="visa produktkorg" src="./media/001-shopping-cart.png" />
 						<!-- Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> -->
                     </a>
                 </li><!--
                 --><li class="menu-checkout">
-                    <a href="#" role="button"  class="nav-link">
+                    <a href="#" role="button"  class="nav-link" tabindex="7">
 						<img class="checkout-icon" alt="gå till kassa" src="./media/002-credit-card.png" />
 						<!-- Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> -->
                     </a>
@@ -65,12 +65,12 @@
         
    
 
-    <section class="section-news" role="region" aria-labelledby="news">
+    <section class="section-news" role="region" aria-labelledby="news" tabindex="0">
         <h2 id="news">Nyheter</h2>
         
 <!-- width="720" height="405" -->
         <article class="news-video">
-            <iframe src="https://www.youtube.com/embed/-PUzyoIvyH8" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe title="Our latest video" src="https://www.youtube.com/embed/-PUzyoIvyH8?html5=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </article>
         
         <h3>Våra senaste produkter</h3>
@@ -149,7 +149,7 @@
         <section class="main-section-container">
 
             <article class="main-article">
-                <a href="#" aria-label="Mer information om produkten nedan">
+                <a href="#" aria-label="Mer information om Argoflex 120mm nedan">
                     <img class="main-article-image" src="./media/jen-theodore-4MObIb7Xagw-unsplash_1x1.jpg" alt="Argoflex 120mm camera">
                 </a>
                 <h3>
@@ -212,8 +212,8 @@
         </section>
     </main>
 
-    <section class="section-pdf">
-        <embed class="pdf" src="./media/kontakt.pdf" type="application/pdf" aria-label="Kontakta oss för konsultation vid reparation och renovering.">
+    <section class="section-pdf" aria-label="Kontakta oss för konsultation vid reparation och renovering." tabindex="0">
+        <embed class="pdf" src="./media/kontakt.pdf" type="application/pdf" tabindex="-1">
     </section>
 
     <footer>
@@ -222,10 +222,10 @@
                 <li>
                     <a href="mailto:scss@scss.se" aria-label="Kontakta oss via e-mail, scss@scss.se."><h5>scss@scss.se</h5></a>
                 </li>
-                <li aria-label="Ring oss på: 08-123 123 12">
+                <li aria-label="Ring oss på: 08-123 123 12" tabindex="0">
                     <h5>08-123 123 12</h5>
                 </li>
-                <li>
+                <li aria-label="Butiken ligger på StreetInStockholm 22, 123 45 STOCKHOLM, SWEDEN" tabindex="0">
                     <h5>StreetInStockholm 22</h5>
                 </li>
                 <li>
