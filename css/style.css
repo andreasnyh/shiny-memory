@@ -207,17 +207,13 @@ header > nav > ul a {
 	position: relative;
 	background: linear-gradient(25deg, rgba(71, 163, 179, 0.5), rgb(255, 213, 179, .5));
 	user-select: none;
-}
-
-.hero-container {
-	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 /* Adds hero image */
-.hero-container::after {
+.section-hero::after {
 	content: "";
 	background-color: slategray; /* Fallback color*/
 	background-image: url("../media/chris-lawton-C1rsRsMz-cQ-unsplash.jpg");
