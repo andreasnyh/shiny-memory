@@ -1,6 +1,9 @@
-/* GLOBAL
+/* ANDRÉAS NY
 #############################################################
-############################################################# */
+	GLOBAL
+#############################################################
+*/
+
 * {
 	margin: 0;
 	padding: 0;
@@ -32,8 +35,9 @@ img {
 	box-shadow: 0 0 8px 2.5px rgba(125, 125, 125, 0.25);
 }
 
-/*  TYPOGRAPHY
+/*
 #############################################################
+TYPOGRAPHY
 ############################################################# */
 
 * {
@@ -122,13 +126,9 @@ footer h4 {
 }
 
 
-/*  END TYPOGRAPHY
+/*
 #############################################################
-############################################################# */
-
-
-/* HEADER / NAV / HERO
-#############################################################
+	HEADER / NAV / HERO
 ############################################################# */
 
 header {
@@ -200,7 +200,7 @@ header > nav > ul a {
 
 /* ########################## - HERO - ################################ */
 
-/* Hero section with gradient that goes over the hero-image*/
+/* Hero section with gradient that colors the hero-image*/
 .section-hero {
 	width: 100%;
 	height: 40rem;
@@ -221,7 +221,6 @@ header > nav > ul a {
 	content: "";
 	background-color: slategray; /* Fallback color*/
 	background-image: url("../media/chris-lawton-C1rsRsMz-cQ-unsplash.jpg");
-	/* Testing new bkg*/
 	background-position: 0 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -234,9 +233,7 @@ header > nav > ul a {
 }
 
 
-/* NEWS
-#############################################################
-############################################################# */
+/* ########################## - NEWS - ################################ */
 
 .section-news {
 	margin: 6rem 0;
@@ -281,11 +278,7 @@ header > nav > ul a {
 	z-index: -1;
 }
 
-
-
-/* MAIN
-#############################################################
-############################################################# */
+/* ########################## - MAIN - ################################ */
 
 .main-main {
 	background-image: linear-gradient(45deg, hsl(189, 43%, 85%), hsl(189, 43%, 95%));
@@ -311,9 +304,7 @@ header > nav > ul a {
 	max-width: calc(50% - 1.5rem);
 }
 
-/* PDF
-#############################################################
-############################################################# */
+/* ########################## - PDF - ################################ */
 
 .section-pdf {
 	display: flex;
@@ -328,9 +319,7 @@ header > nav > ul a {
 	height: 100%;
 }
 
-/* FOOTER
-#############################################################
-############################################################# */
+/* ########################## - FOOTER - ################################ */
 
 footer {
 	display: flex;
@@ -351,7 +340,6 @@ footer ul {
 
 footer ul li+li {
 	margin: 1rem 0;
-	/* outline: red solid 1px; */
 }
 
 footer .service {
@@ -372,11 +360,10 @@ footer .service {
 */
 
 
-
-
-/* Desktop rules wider than 1440px
-#############################################################
-#############################################################
+/*
+##########################################################################################################################
+	Desktop rules wider than 1440px
+##########################################################################################################################
 */
 
 @media only screen and (min-width: 1440px) and (orientation: landscape) {
@@ -422,9 +409,10 @@ footer .service {
 }
 
 
-/* Desktop rules wider than 1024px up to 1440px
-#############################################################
-#############################################################
+/* 
+##########################################################################################################################
+	Desktop rules wider than 1024px up to 1440px
+##########################################################################################################################
 */
 
 @media only screen and (min-width: 1024.1px) and (max-width: 1440px) and (orientation: landscape) {
@@ -435,7 +423,7 @@ footer .service {
 	}
 
 /* Fix navigation */
-	header>nav {
+	header > nav {
 		position: fixed;
 		z-index: 3;
 		top: 0;
@@ -475,11 +463,9 @@ footer .service {
 
 
 /* 
-#############################################################
-#############################################################
+##########################################################################################################################
 Tablet rules for Portrait mode
-#############################################################
-#############################################################
+##########################################################################################################################
 */
 
 @media only screen and (max-width: 1024px) and (orientation: portrait) {
@@ -489,10 +475,9 @@ Tablet rules for Portrait mode
 		font-size: 14px;
 	}
 
-	/*  HEADER & NAV
-	############################################################# */
+/* ########################## - HEADER & NAV - ################################ */
 
-/* Fix navigation */
+/* Fix navigation menu with handheld menu */
 	header > nav ul {
 		position: fixed;
 		display: flex;
@@ -540,12 +525,11 @@ Tablet rules for Portrait mode
 		right: 0;
 	}
 
+/* ########################## - HERO & NEWS TABLET PORTRAIT - ################################ */
 
-	/*  HERO & NEWS Tablet portrait
-	############################################################# */
-
+/* Margin top Hero-area */
 	.section-hero {
-		margin-top: 5rem;
+		margin-top: 7rem;
 	}
 
 	.section-news-items-1 {
@@ -556,62 +540,62 @@ Tablet rules for Portrait mode
 		justify-content: space-around;
 	}
 
+/* News article size */
 	.news-article {
 		height: 18rem;
 		width: 18rem;
-		margin: 3rem 0;
+		margin: 2rem 0;
 		border: none;
 	}
 
-	.news-article+.news-article {
+/* Remove border between articles */
+	.news-article + .news-article {
 		border: none;
 	}
 
 	.pdf {
 		width: 80%;
-		/* height: 40vh; */
 	}
 
-	/* Footer Tablet portrait
-	############################################################# */
+/* ########################## - FOOTER TABLET PORTRAIT - ################################ */
 
 	footer {
 		font-size: 16px;
 	}
 
+/* Align service-list in footer to the bottom*/
 	footer .service {
-		margin-top: 3.5rem;
+		margin-top: 4rem;
 	}
 
 }
 
-/* TABLET RULES FOR LANDSCAPE
+/*
 ##########################################################################################################################
+	TABLET RULES FOR LANDSCAPE
 ##########################################################################################################################
 */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
 	html {
-		font-size: 12px;
+		font-size: 10px;
 	}
 
-	/*  HEADER & NAV Tablet landscape
-	############################################################# */
-
-	header>nav {
+/* Fix navigation without handheld menu*/
+	header > nav {
 		position: fixed;
 		z-index: 3;
-		/* background-color: var(--color-primary-50); */
 	}
 
+/* Adjust logo size */
 	header h1 {
 		font-size: 3rem;
 	}
 
-	/*  HERO & NEWS Tablet portrait
-	############################################################# */
+/* ########################## - NEWS Tablet landscape - ################################ */
 
+/* Video size */
 	.news-video iframe {
 		width: 70%;
 		height: 50vh;
@@ -628,10 +612,10 @@ Tablet rules for Portrait mode
 	.news-article {
 		height: 25rem;
 		width: 25rem;
-		/* margin: 1rem; */
+		margin: 2rem;
 	}
 
-	.news-article+.news-article {
+	.news-article + .news-article {
 		border: none;
 	}
 
@@ -639,32 +623,36 @@ Tablet rules for Portrait mode
 		width: 80%;
 	}
 
+/* Align service-list in footer to the bottom*/
 	footer .service {
-		/* Align service-list in footer to the bottom*/
-		margin-top: 2.3em;
+		margin-top: 4rem;
 	}
 }
 
 /*
-#############################################################
-#############################################################
-	Phone rules		Phone rules		Phone rules	
-#############################################################
-#############################################################
+##########################################################################################################################
+##########################################################################################################################
+	Phone rules		Phone rules		Phone rules		Phone rules		Phone rules		Phone rules		Phone rules
+##########################################################################################################################
+##########################################################################################################################
 */
 
 
-/* Phone rules for Landscape mode
-#############################################################
-############################################################# */
+/*
+##########################################################################################################################
+	Phone rules for Landscape mode
+##########################################################################################################################
+*/
 
 @media only screen and (max-width: 767px) and (orientation: landscape) {
 
+/* Adjust DOM font-size */
 	html {
 		font-size: 10px;
 	}
 
-	header>nav {
+/* Fix navigation menu */
+	header > nav {
 		position: static;
 		display: flex;
 		justify-content: space-between;
@@ -678,19 +666,14 @@ Tablet rules for Portrait mode
 		position: inherit;
 		top: 0;
 		z-index: 3;
-		/* background-color: var(--color-primary-50); */
 	}
 
-	/* 
-	.nav-logo-container,
-	.checkout-container {
-		width: 22rem;
-	}
- */
+/* Hide nav-links */
 	.nav-links-container {
 		display: none;
 	}
 
+/* Display handheld menu */
 	.nav-links-container-handheld {
 		display: inline-block;
 		position: absolute;
@@ -702,17 +685,22 @@ Tablet rules for Portrait mode
 		z-index: 1;
 	}
 
+/* ########################## - HERO & NEWS PHONE LANDSCAPE - ################################ */
+
 	.section-hero {
 		margin-top: 5rem;
 		height: 50vh;
 	}
 
-	.hero-container {
-		margin: 0;
-	}
-
+/* Adjust hero size */
 	.hero-text {
 		font-size: 3rem;
+	}
+
+/* Video size */
+	.news-video iframe {
+		width: 70vw;
+		height: 40vw;
 	}
 
 	.news-article {
@@ -732,42 +720,35 @@ Tablet rules for Portrait mode
 
 }
 
-
-
-/* Phone rules for Portrait mode
-#############################################################
-############################################################# */
+/*
+##########################################################################################################################
+	Phone rules for Portrait mode
+##########################################################################################################################
+*/
 
 @media only screen and (min-width:300px) and (max-width: 767px) and (orientation: portrait) {
 
-
+/* Adjust DOM font-size */
 	html {
 		font-size: 8px;
 	}
 
+/* Adjust paragraf font-size */
 	p {
 		font-size: 2rem;
 	}
 
-	/*  HEADER & NAV
-############################################################# */
-
-	header>nav ul {
+/* Fix navigation menu */
+	header > nav ul {
 		position: fixed;
-		/* top: .5rem; */
 		z-index: 3;
 	}
 
-	/*
-	.nav-logo-container,
-	.checkout-container {
-		 width: 17rem; 
-	}
-*/
 	.nav-links-container {
 		display: none;
 	}
 
+/* Hide primary navigation and show Handheld */
 	.nav-links-container-handheld {
 		display: inline-block;
 		position: fixed;
@@ -781,21 +762,23 @@ Tablet rules for Portrait mode
 		font-size: 1.5rem;
 	}
 
-	/*  HERO & NEWS - PHONE PORTRAIT
-############################################################# */
+/* ########################## - HERO & NEWS PHONE PORTRAIT - ################################ */
 
+/* Height of- and Margin top of Hero-area */
 	.section-hero {
 		margin-top: 7rem;
 		height: 30vh;
 	}
 
+/* Video size */
 	.news-video iframe {
 		width: 90vw;
+		height: 50vw;
 	}
 
 	.section-news-items-1 {
 		display: flex;
-		width: 90%;
+		width: 95%;
 		flex-flow: row wrap;
 	}
 
@@ -804,6 +787,7 @@ Tablet rules for Portrait mode
 		border: none;
 	}
 
+/* Main content width and remove backgroundcolor */
 	.main-main {
 		width: 90%;
 		background-image: none;
@@ -814,6 +798,7 @@ Tablet rules for Portrait mode
 		align-items: center;
 	}
 
+/* Size and background gradient of main article text */
 	.main-article {
 		max-width: 100%;
 		width: 95%;
@@ -821,34 +806,23 @@ Tablet rules for Portrait mode
 		background-image: linear-gradient(180deg, silver, rgb(250, 250, 250));
 	}
 
-	.main-article h3 {
-		text-align: center;
-	}
-
-	.main-article+.main-article {
+	.main-article + .main-article {
 		padding: 0;
 		margin: 6rem 0 0 0;
 	}
 
-	.main-section-container .main-article:nth-child(odd) {
-		margin-left: 0;
-		padding-left: 0;
-	}
-
-	.main-section-container .main-article:nth-child(even) {
-		padding-right: 0;
-	}
-
+/* ########################## - FOOTER PHONE PORTRAIT - ################################ */
 
 	footer {
 		padding: 3rem 2rem;
 	}
 
+/* Align service-list in footer to the bottom*/
 	footer .service {
-		/* top margin Mobile */
-		margin-top: 3.5rem;
+		margin-top: 4rem;
 	}
 
+/* Adjust font size of items in footer */
 	footer h4 {
 		font-size: 1.5rem;
 	}
