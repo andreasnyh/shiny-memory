@@ -185,8 +185,9 @@ header > nav > ul a {
 	padding: 1rem;
 }
 
-/* Padding to menu item "kameror" and Basket*/
+/* Padding to first menu items and Basket*/
 .nav-links-container > .menu-item,
+.nav-links-container-handheld > .menu-item,
 .menu-basket {
 	padding: 0 1rem;
 }
